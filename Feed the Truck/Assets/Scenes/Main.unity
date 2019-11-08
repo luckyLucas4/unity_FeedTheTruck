@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7cf84d10b13e64fa6e18df7ba854b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
 --- !u!1 &344478921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1489012397802695645, guid: f1e40508f2df4034ab159674e2a07d50,
