@@ -7,19 +7,25 @@ truck
 player
     move :)
 
-smog
+smog :)
 
 house
-    produce compost
-    grows from output by nursery
+    produce compost :)
+    grows from output by nursery :)
 
 nursery
-    invest
-    output to house
+    invest apples :)
+    output to house :)
 
-trees
+compost pile
+    changing size :)
+
+appletree
     apples
-        can rot 
+        falls  :)
+        can catch :)
+
+airtrees
 
 UI
     compost :)

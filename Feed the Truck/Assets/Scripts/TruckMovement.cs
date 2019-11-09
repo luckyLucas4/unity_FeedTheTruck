@@ -7,6 +7,7 @@ public class TruckMovement : MonoBehaviour
     public float speed;
     public float acclereration;
     public int compostCost;
+    public float compostCostModifier = 2.0f;
 
     private int dirX = 1;
     private Rigidbody2D rb;
@@ -27,29 +28,26 @@ public class TruckMovement : MonoBehaviour
         //rb.AddForce(new Vector2(1,0) * speed);
 
         if (dirX < 0)
-        {
             spriteRenderer.flipX = true;
-        }
+
         else if (dirX > 0)
-        {
             spriteRenderer.flipX = false;
-        }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Smog"))
-        {
             dirX = -dirX;
-        }
     }
 
     public int Feeding(int compost)
     {
-        if (compost >= compostCost)
+        if (compost >= compostCost && dirX == -1)
         {
             dirX = 1;
-            return compostCost;
+            int tempCost = compostCost;
+            compostCost = System.Convert.ToInt32(compostCost * compostCostModifier);
+            return tempCost;
         }
         else
         {

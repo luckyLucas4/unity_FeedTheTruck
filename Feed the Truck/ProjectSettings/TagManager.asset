@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Smog
   - Truck
+  - AppleDestroyer
   layers:
   - Default
   - TransparentFX
