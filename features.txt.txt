@@ -1,0 +1,25 @@
+Objects and behaviours:
+truck
+    move :)
+    turn at smog :)
+    turn (at payment) 
+
+player
+    move
+
+smog
+
+house
+    produce compost
+    grows from output by nursery
+
+nursery
+    invest
+    output to house
+
+compost
+
+trees
+    apples
+        can rot 
+
