@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TruckMovement : MonoBehaviour
 {
-    public bool facingRight { get; set; }
-    public int speed;
+    public float speed;
+    public float acclereration;
+    public int compostCost;
 
+    private int dirX = 1;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
@@ -20,13 +22,38 @@ public class TruckMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(new Vector2(1,0.01f) * speed);
+        speed += Time.deltaTime * acclereration/100;
+        transform.Translate(transform.right * speed*dirX/100);
+        //rb.AddForce(new Vector2(1,0) * speed);
 
-        if (speed < 0)
+        if (dirX < 0)
         {
-            Debug.Log("flipping");
+            spriteRenderer.flipX = true;
+        }
+        else if (dirX > 0)
+        {
             spriteRenderer.flipX = false;
         }
-        
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Smog"))
+        {
+            dirX = -dirX;
+        }
+    }
+
+    public int Feeding(int compost)
+    {
+        if (compost >= compostCost)
+        {
+            dirX = 1;
+            return compostCost;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
