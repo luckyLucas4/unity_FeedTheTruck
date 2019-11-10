@@ -5,7 +5,7 @@ using UnityEngine;
 public class CompostManagement : MonoBehaviour
 {
     public float compostOnPile = 0;
-    public Sprite[] compostSprites = new Sprite[4];
+    public Sprite[] compostSprites = new Sprite[5];
 
     public float oldCompostValue;
     private SpriteRenderer spriteRenderer;
@@ -18,13 +18,16 @@ public class CompostManagement : MonoBehaviour
     }
     void Update()
     {
-        if(compostOnPile > 60)
+        if (compostOnPile > 100)
+            spriteRenderer.sprite = compostSprites[4];
+
+        if (compostOnPile > 60)
             spriteRenderer.sprite = compostSprites[3];
 
-        else if (compostOnPile > 40)
+        else if (compostOnPile > 35)
             spriteRenderer.sprite = compostSprites[2];
 
-        else if( compostOnPile > 5)
+        else if( compostOnPile > 10)
             spriteRenderer.sprite = compostSprites[1];
 
         else

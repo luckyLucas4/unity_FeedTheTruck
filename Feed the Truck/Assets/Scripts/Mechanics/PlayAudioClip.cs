@@ -26,9 +26,9 @@ public class PlayAudioClip : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var nt = stateInfo.normalizedTime;
-        if (modulus > 0f) nt %= modulus;
-        if (nt >= t && last_t < t)
-            AudioSource.PlayClipAtPoint(clip, animator.transform.position);
+        //if (modulus > 0f) nt %= modulus;
+        //if (nt >= t && last_t < t)
+            //AudioSource.PlayClipAtPoint(clip, animator.transform.position);
         last_t = nt;
     }
 }

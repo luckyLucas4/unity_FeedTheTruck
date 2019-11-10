@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3498722164412866285}
   - component: {fileID: 3498722164412866284}
   - component: {fileID: 3498722164412866287}
+  - component: {fileID: 1848666328}
   m_Layer: 0
   m_Name: Smog
   m_TagString: Smog
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3498722164412866286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.63, y: -0.52, z: 0}
-  m_LocalScale: {x: 1.637, y: 3.832125, z: 1}
+  m_LocalScale: {x: 28.93985, y: 11.634759, z: 1.7729118}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 636cccf6a798d654aa9c9b835a621468, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34392834, g: 0.32297972, b: 0.3584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32890964, y: 0}
+  m_Offset: {x: -0.4042491, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -105,5 +106,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34218073, y: 1}
+  m_Size: {x: 0.11447185, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1848666328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498722164412866286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48999a12864cb304e8b522b7aba93945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

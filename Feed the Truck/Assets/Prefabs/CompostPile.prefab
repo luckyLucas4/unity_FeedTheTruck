@@ -95,10 +95,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compostOnPile: 0
-  compostSprite0: {fileID: 21300000, guid: b579aebcc5c2abe489186f9043f61ccd, type: 3}
-  compostSprite1: {fileID: 21300000, guid: 4ac6cd6620b2a784e890fac225b0844e, type: 3}
-  compostSprite2: {fileID: 21300000, guid: 0d6576352d800cf48a5afbd68569be59, type: 3}
-  compostSprite3: {fileID: 21300000, guid: f721f0359ffeb8241ab96cafc8c16e82, type: 3}
+  compostSprites:
+  - {fileID: 21300000, guid: b579aebcc5c2abe489186f9043f61ccd, type: 3}
+  - {fileID: 21300000, guid: 4ac6cd6620b2a784e890fac225b0844e, type: 3}
+  - {fileID: 21300000, guid: 0d6576352d800cf48a5afbd68569be59, type: 3}
+  - {fileID: 21300000, guid: f721f0359ffeb8241ab96cafc8c16e82, type: 3}
+  oldCompostValue: 0
 --- !u!61 &7798878288011108772
 BoxCollider2D:
   m_ObjectHideFlags: 0

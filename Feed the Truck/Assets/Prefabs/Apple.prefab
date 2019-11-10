@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fcb4ae1dbdb32f84ebd5b2b86a3e4679, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 654cadb7814a6cf419ae8118e8bca69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,3 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFalling: 0
   isWiggling: 0
+  compostValue: 5
+  collectValue: 1

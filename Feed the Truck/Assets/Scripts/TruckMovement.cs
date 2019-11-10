@@ -5,9 +5,12 @@ using UnityEngine;
 public class TruckMovement : MonoBehaviour
 {
     public float speed;
+    public float speedModifier = 1.5f;
     public float acclereration;
     public int compostCost;
     public float compostCostModifier = 2.0f;
+    public int compostSlowCost;
+    public float compostSlowCostModifier = 2.0f;
 
     private int dirX = 1;
     private Rigidbody2D rb;
@@ -47,6 +50,20 @@ public class TruckMovement : MonoBehaviour
             dirX = 1;
             int tempCost = compostCost;
             compostCost = System.Convert.ToInt32(compostCost * compostCostModifier);
+            return tempCost;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    public int Feedingslow(int compost)
+    {
+        if (compost >= compostSlowCost)
+        {
+            int tempCost = compostSlowCost;
+            compostSlowCost = System.Convert.ToInt32(compostSlowCost * compostSlowCostModifier);
+            speed = speed / speedModifier;
             return tempCost;
         }
         else

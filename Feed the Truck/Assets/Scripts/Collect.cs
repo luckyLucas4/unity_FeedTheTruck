@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
+    public AudioClip appleSound;
+
+    private AudioSource audioSource;
     private Feed feedScript;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         feedScript = GetComponent<Feed>();   
     }
 
@@ -15,6 +19,8 @@ public class Collect : MonoBehaviour
     {
         if (other.gameObject.GetComponent<AppleMovement>())
         {
+            audioSource.clip = appleSound;
+            audioSource.Play();
             feedScript.apples += other.gameObject.GetComponent<AppleMovement>().collectValue;
             Destroy(other.gameObject);
         }   
